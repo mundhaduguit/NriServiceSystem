@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -63,6 +65,10 @@ resources :user_sessions
   resource :user, :as => 'account'  # a convenience route
 
   match 'signup' => 'users#new',:via => [:get], :as => :signup
-
+  
   root :to => 'users#new'
+  
+  namespace :admin do
+    resources :service, :home
+  end
 end

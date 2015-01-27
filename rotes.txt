@@ -1,0 +1,44 @@
+             Prefix Verb   URI Pattern                       Controller#Action
+      user_sessions GET    /user_sessions(.:format)          user_sessions#index
+                    POST   /user_sessions(.:format)          user_sessions#create
+   new_user_session GET    /user_sessions/new(.:format)      user_sessions#new
+  edit_user_session GET    /user_sessions/:id/edit(.:format) user_sessions#edit
+       user_session GET    /user_sessions/:id(.:format)      user_sessions#show
+                    PATCH  /user_sessions/:id(.:format)      user_sessions#update
+                    PUT    /user_sessions/:id(.:format)      user_sessions#update
+                    DELETE /user_sessions/:id(.:format)      user_sessions#destroy
+              login GET    /login(.:format)                  user_sessions#new
+             logout GET    /logout(.:format)                 user_sessions#destroy
+              users GET    /users(.:format)                  users#index
+                    POST   /users(.:format)                  users#create
+           new_user GET    /users/new(.:format)              users#new
+          edit_user GET    /users/:id/edit(.:format)         users#edit
+               user GET    /users/:id(.:format)              users#show
+                    PATCH  /users/:id(.:format)              users#update
+                    PUT    /users/:id(.:format)              users#update
+                    DELETE /users/:id(.:format)              users#destroy
+            account POST   /user(.:format)                   users#create
+        new_account GET    /user/new(.:format)               users#new
+       edit_account GET    /user/edit(.:format)              users#edit
+                    GET    /user(.:format)                   users#show
+                    PATCH  /user(.:format)                   users#update
+                    PUT    /user(.:format)                   users#update
+                    DELETE /user(.:format)                   users#destroy
+             signup GET    /signup(.:format)                 users#new
+               root GET    /                                 users#new
+admin_service_index GET    /admin/service(.:format)          admin/service#index
+                    POST   /admin/service(.:format)          admin/service#create
+  new_admin_service GET    /admin/service/new(.:format)      admin/service#new
+ edit_admin_service GET    /admin/service/:id/edit(.:format) admin/service#edit
+      admin_service GET    /admin/service/:id(.:format)      admin/service#show
+                    PATCH  /admin/service/:id(.:format)      admin/service#update
+                    PUT    /admin/service/:id(.:format)      admin/service#update
+                    DELETE /admin/service/:id(.:format)      admin/service#destroy
+   admin_home_index GET    /admin/home(.:format)             admin/home#index
+                    POST   /admin/home(.:format)             admin/home#create
+     new_admin_home GET    /admin/home/new(.:format)         admin/home#new
+    edit_admin_home GET    /admin/home/:id/edit(.:format)    admin/home#edit
+         admin_home GET    /admin/home/:id(.:format)         admin/home#show
+                    PATCH  /admin/home/:id(.:format)         admin/home#update
+                    PUT    /admin/home/:id(.:format)         admin/home#update
+                    DELETE /admin/home/:id(.:format)         admin/home#destroy
