@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :fronts
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   # The priority is based upon order of creation: first created -> highest priority.
@@ -56,7 +58,12 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  #match '' => "front#index",:via => [:get], :as => :home
+  match 'home' => "front#index",:via => [:get],:as => :home
+
 resources :user_sessions
+resources :services
 
   match 'login' => "user_sessions#new", :via => [:get],     :as => :login
   match 'logout' => "user_sessions#destroy", :via => [:get],:as => :logout
