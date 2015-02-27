@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  resources :employee_services
+
+  resources :employees
+
+  resources :orders
+
   resources :fronts
 
   devise_for :admin_users, ActiveAdmin::Devise.config
