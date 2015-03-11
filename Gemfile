@@ -33,6 +33,7 @@ gem 'rolify'
 gem 'formtastic'
 gem 'activeadmin', github: 'activeadmin'
 gem 'devise'
+gem "paperclip", "~> 4.2"
 gem 'rails-erd'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
