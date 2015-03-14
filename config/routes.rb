@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   resources :orders
 
   resources :fronts
+  
+ 
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
@@ -82,6 +84,6 @@ resources :services
   root :to => 'users#new'
   
   namespace :admin do
-    resources :service, :home
+    resources :service, :home, :pictures
   end
 end

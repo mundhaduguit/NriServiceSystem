@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @order.customer_id %>
+</p>
+
+<p>
+  <strong>Service:</strong>
+  <%= @order.service_id %>
+</p>
+
+<p>
+  <strong>Employee:</strong>
+  <%= @order.employee_id %>
+</p>
+
+<p>
+  <strong>Service date:</strong>
+  <%= @order.service_date %>
+</p>
+
+<p>
+  <strong>Relative:</strong>
+  <%= @order.relative_id %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @order.state %>
+</p>
+
+<p>
+  <strong>User comment:</strong>
+  <%= @order.user_comment %>
+</p>
+
+<p>
+  <strong>Employee comment:</strong>
+  <%= @order.employee_comment %>
+</p>
+
+<p>
+  <strong>Order rating:</strong>
+  <%= @order.order_rating %>
+</p>
+
+<p>
+  <strong>Feedback:</strong>
+  <%= @order.feedback %>
+</p>
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>
