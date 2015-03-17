@@ -6,10 +6,32 @@
       <h1>Services List</h1>
     </header>
     
-    <% @services.each do |service| %>
-    	<%=service.name%>
-   	<%end%>
     
+    <div class="free_sevices_list services_list">
+    	<h3>Free Services</h3>
+    	 <%a = 20%>
+    	
+    	<% @services.each do |service| %>
+	    	<%=service.name%><br>
+	    	
+	   	<%end%>
+    </div>
+    <div class="paid_services_list services_list">
+    	<h3>Paid Services</h3>
+    	
+    	<% @services.each do |service| %>
+	    	<%=service.name%><br>
+	    	
+	   	<%end%>	
+    </div>
+    
+    <div class="extra_services_list services_list">
+    	<h3>Extra Services</h3>
+
+    	<% @services.each do |service| %>
+	    	<%=service.name%><br>
+	   	<%end%>	
+    </div>
     
     
     <nav>
