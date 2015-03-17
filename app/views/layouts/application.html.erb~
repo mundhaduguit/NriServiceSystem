@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NriServiceSystem</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+<link rel="stylesheet" href="stylesheets/style.css">
+<link rel="stylesheet" href="stylesheets/prettyphoto.css"><!-- for gallery -->
+<link rel="stylesheet" href="stylesheets/skins/teal.css"><!-- skin color -->
+<link rel="stylesheet" href="stylesheets/responsive.css">
+<!-- IE Fix for HTML5 Tags -->
+<!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+
+<!-- HEADER
+================================================== -->
+<div class="row">	
+		<div class="four columns">
+		</div>
+		<div class="eight columns noleftmarg">		
+			<nav id="nav-wrap">
+				<ul class="nav-bar sf-menu">
+				
+					<li class="current">
+					<a href="index.html">Home</a>
+						<ul>
+												
+						<li><a href="index2.html">Without slider</a></li>						
+						</ul>
+					</li>
+					
+					<li>
+					<a href="/services.html">Services</a>
+					</li>
+					
+					<li>
+					<a href="/login">Login</a>
+						
+					</li>
+					
+					<li>
+					<a href="/users/new">Register</a>
+					</li>
+					
+					<li>
+					<a href="#">About Us</a>
+					
+					</li>
+					
+				</ul>
+				</nav>
+		</div>	
+</div>
+<div class="clear">
+</div>
+<!-- SUBHEADER
+================================================== -->
+<div id="subheader">
+	<div class="row">
+		<div class="twelve columns">
+			<p>
+				Global Nri Services
+			</p>
+		</div>
+	</div>
+</div>
+<div class="hr">
+</div>
+<!-- CONTENT 
+================================================== -->
+
+<%= yield %>
+<!-- TWITTER
+================================================== -->
+
+<!-- JAVASCRIPTS 
+================================================== -->
+<!-- Javascript files placed here for faster loading -->
+<script src="javascripts/foundation.min.js"></script>
+<script src="javascripts/jquery.cycle.js"></script>
+<script src="javascripts/app.js"></script>
+<script src="javascripts/modernizr.foundation.js"></script>
+<script src="javascripts/slidepanel.js"></script>
+<script src="javascripts/scrolltotop.js"></script>
+<script src="javascripts/hoverIntent.js"></script>
+<script src="javascripts/superfish.js"></script>
+<script src="javascripts/responsivemenu.js"></script>
+<script src="javascripts/jquery.tweet.js"></script>
+<script src="javascripts/twitterusername.js"></script>
+<script src="javascripts/jquery.isotope.min.js"></script>
+<script src="javascripts/jquery.prettyPhoto.js"></script>
+<script src="javascripts/custom.js"></script>
+</body>
+</html>

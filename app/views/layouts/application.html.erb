@@ -5,27 +5,78 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+<link rel="stylesheet" href="/stylesheets/style.css">
+<link rel="stylesheet" href="/stylesheets/prettyphoto.css"><!-- for gallery -->
+<link rel="stylesheet" href="/stylesheets/skins/teal.css"><!-- skin color -->
+<link rel="stylesheet" href="/stylesheets/responsive.css">
+<!-- IE Fix for HTML5 Tags -->
+<!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
 </head>
+
 <body>
 
-  <div class="nss_header">
-	  	<b>NRI Service System</b>
-	  	<div class="menu_part">
-	  		<div class="menu_header"><h4>NRI SS LOGO</h4></div>
-	  		<div class="menu_header"> 
-	  			<a href="/fronts"> Home </a></div>
-	  		<div class="menu_header"> What we are</div>
-	  		<div class="menu_header">
-	  			<a href="/services"> Services </a></div>
-	  		<div class="menu_header"> Contact</div>
-	  		<div class="menu_header"> 
-	  			<a href="/admin/login"> login </a></div>
-	  	</div>
-  </div>
-  
-
+<!-- HEADER
+================================================== -->
+<div class="row">	
+		<div class="four columns">
+		</div>
+		<div class="eight columns noleftmarg">		
+			<nav id="nav-wrap">
+				<ul class="nav-bar sf-menu">
+				
+					<li class="current">
+					<a href="index.html">Home</a>
+						<ul>
+												
+						<li><a href="index2.html">Without slider</a></li>						
+						</ul>
+					</li>
+					
+					<li>
+					<a href="/services.html">Services</a>
+					</li>
+					
+					<li>
+					<a href="/login">Login</a>
+						
+					</li>
+					
+					<li>
+					<a href="/users/new">Register</a>
+					</li>
+					
+					<li>
+					<a href="#">About Us</a>
+					
+					</li>
+					
+				</ul>
+				</nav>
+		</div>	
+</div>
+<div class="clear">
+</div>
+<!-- SUBHEADER
+================================================== -->
+<div id="subheader">
+	<div class="row">
+		<div class="twelve columns">
+			<p>
+				Global Nri Services
+			</p>
+		</div>
+	</div>
+</div>
+<div class="hr">
+</div>
+<!-- CONTENT 
+================================================== -->
 
 <%= yield %>
+<!-- TWITTER
+================================================== -->
 
-</body>
+
 </html>

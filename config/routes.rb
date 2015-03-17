@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
 
+  resources :employee_services
+
+  resources :employees
+
+  resources :orders
+
   resources :fronts
+  
+ 
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
@@ -73,9 +81,9 @@ resources :services
 
   match 'signup' => 'users#new',:via => [:get], :as => :signup
   
-  root :to => 'users#new'
+  #root :to => 'users#new'
   
   namespace :admin do
-    resources :service, :home
+    resources :service, :home, :pictures
   end
 end

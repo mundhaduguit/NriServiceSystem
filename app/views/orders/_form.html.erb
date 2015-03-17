@@ -1,0 +1,57 @@
+<%= form_for(@order) do |f| %>
+  <% if @order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+      <% @order.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :customer_id %><br>
+    <%= f.number_field :customer_id %>
+  </div>
+  <div class="field">
+    <%= f.label :service_id %><br>
+    <%= f.number_field :service_id %>
+  </div>
+  <div class="field">
+    <%= f.label :employee_id %><br>
+    <%= f.number_field :employee_id %>
+  </div>
+  <div class="field">
+    <%= f.label :service_date %><br>
+    <%= f.date_select :service_date %>
+  </div>
+  <div class="field">
+    <%= f.label :relative_id %><br>
+    <%= f.number_field :relative_id %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br>
+    <%= f.text_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label :user_comment %><br>
+    <%= f.text_area :user_comment %>
+  </div>
+  <div class="field">
+    <%= f.label :employee_comment %><br>
+    <%= f.text_area :employee_comment %>
+  </div>
+  <div class="field">
+    <%= f.label :order_rating %><br>
+    <%= f.number_field :order_rating %>
+  </div>
+  <div class="field">
+    <%= f.label :feedback %><br>
+    <%= f.text_area :feedback %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
