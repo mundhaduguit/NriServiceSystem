@@ -67,8 +67,8 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 
-  #match '' => "front#index",:via => [:get], :as => :home
-  match 'home' => "front#index",:via => [:get],:as => :home
+  #match '' => "fronts#index",:via => [:get], :as => :home
+  match 'home' => "fronts#index",:via => [:get],:as => :home
 
 resources :user_sessions
 resources :services

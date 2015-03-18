@@ -261,7 +261,7 @@ SUPERFISH
  
 @media screen and (min-width: 600px) { 
 	/* ensure #nav is visible on desktop version */
-	.sf-menu { display: block !important;} 
+	.sf-menu { display: block !important; min-width: 60%; } 
 }
 
 /************************************************************************************
