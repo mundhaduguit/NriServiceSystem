@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   resources :employee_services
 
-  resources :employees
+ 
 
   resources :orders
 
@@ -84,6 +84,6 @@ resources :services
   #root :to => 'users#new'
   
   namespace :admin do
-    resources :service, :home, :pictures
+     resources :service, :home, :pictures, :employee
   end
 end

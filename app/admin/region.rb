@@ -1,15 +1,17 @@
-ActiveAdmin.register Service do
- 
+ActiveAdmin.register Region do
+  
+  #form partial: 'new'
 form do |f|
-  f.input :name
-  f.input :description
-  f.input :service_type, :as => :select,:collection => ["Paid", "default"],:include_blank => false
-  f.actions do
+f.input :region_name
+ f.actions do
    f.action :submit, :as => :button
    f.action :cancel, :as => :link
-   end
+ end
+#f.number_field :role
+#f.number_field :user
+#  f.input :service_type, :as => :select,:collection => ["Paid", "default"],:include_blank => false
 end
-permit_params :name, :description, :service_type
+permit_params :region_name
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
