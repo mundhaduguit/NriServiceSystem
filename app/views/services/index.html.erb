@@ -23,6 +23,46 @@
 </head>
 <body>
 
+<div class="services_display_div">
+	
+	<% @services.each do |service| %>
+	    	
+	  	<div class="service_information">
+			<div class="six columns category trains">
+				<h4> <%=service.name%> </h4>
+				<p>
+					 <h5> <%=service.description%> </h5>
+				</p>
+				<div class="portofoliothumb">
+					<div class="portofoliothumboverlay">
+						<div class="viewgallery">
+							<!--image here -->
+							<a data-gal="prettyPhoto[gallery]" href="images/temp/folio1.jpg"><img src="images/playgal.png" class="left galleryicon" alt=""> Gallery</a>
+						</div>
+						<div class="inner">
+							<a class="projectdetail" href="portofoliodetail.html">+ Project Details</a>
+						</div>
+					</div>
+					<!-- image here -->
+					<img src="images/temp/folio1.jpg" alt="">
+				</div>
+				<div class="confirm_information">
+					<%= "Add/confirm service "%>
+				</div>
+			</div>
+		</div>
+	    		
+	<%end%>
+
+</div>
+
+
+
+
+
+
+
+
 <div id="portofolio" class="row">
 	<!-- Project 1-->
 	<div class="six columns category trains">

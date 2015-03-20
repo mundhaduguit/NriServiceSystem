@@ -702,7 +702,7 @@ form.custom div.custom.dropdown a.selector { height: 30px }
 	width: 41.66667%
 }
 .six, .row .six {
-	width: 50%
+	/*width: 50%*/
 }
 .seven, .row .seven {
 	width: 58.33333%
