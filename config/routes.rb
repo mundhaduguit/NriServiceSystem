@@ -81,7 +81,7 @@ resources :services
 
   match 'signup' => 'users#new',:via => [:get], :as => :signup
   
-  #root :to => 'users#new'
+  root :to => 'fronts#index'
   
   namespace :admin do
      resources :service, :home, :pictures, :employee
