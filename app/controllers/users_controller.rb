@@ -1,17 +1,14 @@
 class UsersController < ApplicationController
-before_filter :require_user, :only => [:show, :edit, :update]
 
-def new
+  before_filter :require_user, :only => [:show, :edit, :update]
+
+  def new
     @user = User.new
   end
 
   def create
     @user = User.new(user_params)
-
-    # Saving without session maintenance to skip
-    # auto-login which can't happen here because
-    # the User has not yet been activated
-   @user.login= user_params[:email]
+    @user.login= user_params[:email]
    if @user.save
       flash[:notice] = "Your account has been created."
       redirect_to signup_url
@@ -19,11 +16,11 @@ def new
       flash[:notice] = "There was a problem creating you."
       render :action => :new
     end
-
   end
 
   def show
     @user = current_user
+    @orders = Order.all  
   end
 
   def edit
@@ -39,6 +36,7 @@ def new
       render :action => :edit
     end
   end
+  
   def user_params
     params.require(:user).permit(:email, :name, :password,:password_confirmation)
   end

@@ -141,15 +141,20 @@
 	min-height: 800px;
 	
 }
-
+.Services_div{
+	border:#33877D 2px;
+	border-style: groove;
+    border-width: 2px;
+}
 .service_information{
 	width: 45%;
 	min-height: 200px;
-	border:#000000 2px;
+	border:#33877D 2px;
 	float: left;
-	border-style: solid;
+	border-style: groove;
     border-width: 2px;
-    margin-left: 2px;
+    margin: 2px;
+    border-radius: 20px;
 }
 
 .confirm_information{
@@ -159,7 +164,15 @@
 
 
 
+/*==================== */
 
+.service_display{
+	
+   width: 200px;
+   height: 400px;
+   background: #33877d;
+   
+}
 
 
 
