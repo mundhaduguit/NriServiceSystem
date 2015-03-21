@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 20150317173712) do
   end
 
   create_table "employees", force: true do |t|
-    t.integer  "role_id"
+    t.integer  "region_id"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -81,12 +81,22 @@ ActiveRecord::Schema.define(version: 20150317173712) do
   end
 
   create_table "pictures", force: true do |t|
+    t.integer  "imageable_id"
+    t.string   "imageable_type"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "avatar_file_name"
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.text     "description"
+    t.string   "heading"
+  end
+
+  create_table "regions", force: true do |t|
+    t.string   "region_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "regions", force: true do |t|
@@ -112,6 +122,10 @@ ActiveRecord::Schema.define(version: 20150317173712) do
     t.string   "service_type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   create_table "sessions", force: true do |t|

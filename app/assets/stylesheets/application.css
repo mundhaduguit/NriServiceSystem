@@ -89,11 +89,13 @@
 
 .menu-tab{
 	min-width:100px;
-	background-color: #33EBC6;
+	background-color: #33877d;
 	margin-right: 1px;
 	text-align: center;
 	font-family: monospace;
 	font-weight: 900;
+	border-radius: 10px;
+	
 }
 .menu-tab :hover{
 	background-color: #00664C;
@@ -110,7 +112,7 @@
 	top: 200px;
 	z-index: 99999;
 	opacity: 0.5;
-	color: #FFFFFF;
+	
 	padding: 25px;
 	font-size: 30px;
 	font-family: inherit;
@@ -123,11 +125,12 @@
 	text-align: center;
 	height:100px;
 	line-height: 100px;
-	background: #33EBC6;
+	background: #33877d;
 	margin-top: 50px;
 	margin-left: 5%;
 	margin-bottom: 50px;
 	font-size: 30px;
+	border-radius: 10px;
 }
 /*-------------------------------------*/
 

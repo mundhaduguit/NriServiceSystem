@@ -1,5 +1,17 @@
 Rails.application.routes.draw do
 
+  resources :employee_services
+
+ 
+
+  resources :orders
+
+  resources :fronts
+  
+ 
+
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -54,7 +66,12 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  #match '' => "fronts#index",:via => [:get], :as => :home
+  match 'home' => "fronts#index",:via => [:get],:as => :home
+
 resources :user_sessions
+resources :services
 
   match 'login' => "user_sessions#new", :via => [:get],     :as => :login
   match 'logout' => "user_sessions#destroy", :via => [:get],:as => :logout
@@ -63,6 +80,10 @@ resources :user_sessions
   resource :user, :as => 'account'  # a convenience route
 
   match 'signup' => 'users#new',:via => [:get], :as => :signup
-
-  root :to => 'users#new'
+  
+  root :to => 'fronts#index'
+  
+  namespace :admin do
+     resources :service, :home, :pictures, :employee
+  end
 end
