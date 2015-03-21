@@ -1,3 +1,33 @@
+
+
+<%= h render(:partial => '/fronts/home_page_desing') %>
+
+<div id="login-home-page" class="login-popup">
+ 	<%= "LOGIN"%>
+	<%= form_for @user_session, :as => :user_session, :url => { :action => "create" } do |f| %>
+	  <br />
+	  
+	  <%= render "shared/error_messages", :target => @user_session %>
+	  <div style="font-size: 15px">
+	  	<%= f.text_field :login, :value => "email" %><br />
+	  
+	  	<%= f.password_field :password, :value => "Password" %><br />
+	  </div>
+	  
+	  <div class="checkbox-div" style="font-size: 20px; color: #FFFFFF; ">
+	  	<%= f.check_box :remember_me, :style =>"float:left;" %><%= f.label :remember_me, :style => "color:#FFFFFF" %><br />
+	  	<%= f.submit "Login" %>
+	  </div>
+	  
+	  
+	<% end %>
+</div>
+
+
+
+<br>
+<br />
+
 <h1>Login</h1>
 # app/views/user_sessions/new.html.erb
 <%= form_for @user_session, :as => :user_session, :url => { :action => "create" } do |f| %>
