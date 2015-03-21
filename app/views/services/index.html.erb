@@ -46,7 +46,13 @@
 					<%end%>
 				</div>
 				<div class="confirm_information">
-					<%= "Add/confirm service "%>
+					<% if current_user.present?%>
+						<%= "Add/confirm service "%>
+					<% else %>
+						<%= "else"%>
+					<% end%>
+					
+					<%= link_to 'add service', {:controller => "orders", :action => "create", :customer_id => current_user.id, :service_id => service.id}, :method => "post" %>
 				</div>
 			</div>
 		</div>

@@ -1,5 +1,20 @@
 class OrdersController < InheritedResources::Base
 
+  def create
+    logger.info "**************************** test **********"
+    @order = Order.new(params[:order])
+    
+    if @order.save
+      flash[:notice] = "Service added succesfully"
+      redirect_to services_url
+    else
+      flash[:notice] = "there was some error while adding service"
+      redirect_to services_url
+    end  
+  end
+
+
+
   private
 
     def order_params
