@@ -20,7 +20,8 @@ class UsersController < ApplicationController
 
   def show
     @user = current_user
-    @orders = Order.all  
+    @orders = current_user.orders
+      
   end
 
   def edit

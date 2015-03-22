@@ -15,7 +15,9 @@
  *= require_self
  */
 
-
+/*
+ *= require jquery-ui
+ */
 
 /*
 .nss_header{
@@ -166,14 +168,68 @@
 
 /*==================== */
 
-.service_display{
-	
-   width: 200px;
+/*.profile_box_update{
+	width :70%;
+	height:350px;
+	margin:10px;
+	background: #33877d;
+	margin-left: auto;
+    margin-right: auto;
+}
+*/
+.order_display{
+   float: left;
+   margin: 10px;
+   width: 300px;
    height: 400px;
    background: #33877d;
+   border-radius: 300px;
    
+   border-style: groove;
 }
 
 
+.order_box{
+	margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+	width:150px;
+	height: 100px;
+	background:#ffffff;
+}
+.star-five{
+	margin-top:20px;
+	margin-left: 30px;
+} 
 
+.middle_img{
+width: 150px;
+height: 100px;	
+}
+@font-face {
+  font-family: 'gitchgitch';
+  src:url('gitchgitch.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
 
+a.heading_order{
+	margin:5px;
+	margin-left: 10px;
+	font-family: 'gitchgitch';
+	font-size: 20px;
+	
+	color: #3ADF00;
+}
+.description_order{
+	color: #ffffff;
+	margin:5px;
+	
+}
+.order label{
+	background: #FFFFFF;
+	color: #000000;
+}
+.formtastic li{
+	list-style:none;
+}

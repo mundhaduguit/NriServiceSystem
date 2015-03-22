@@ -1,9 +1,7 @@
 class OrdersController < InheritedResources::Base
 
   def create
-    logger.info "**************************** test **********"
-    @order = Order.new(params[:order])
-    
+    @order = Order.new(order_params)
     if @order.save
       flash[:notice] = "Service added succesfully"
       redirect_to services_url
@@ -18,7 +16,7 @@ class OrdersController < InheritedResources::Base
   private
 
     def order_params
-      params.require(:order).permit(:customer_id, :service_id, :employee_id, :service_date, :relative_id, :state, :user_comment, :employee_comment, :order_rating, :feedback)
+      params.require(:order).permit(:customer_id, :service_id, :employee_id, :service_date, :relative_id, :state, :user_comment, :employee_comment, :order_rating, :feedback,:user_id)
     end
 end
 

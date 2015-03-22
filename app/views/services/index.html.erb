@@ -27,7 +27,7 @@
 	
 	<% @services.each do |service| %>
 	    	
-	  	<div class="service_information" style="height: 400px;">
+	  	<div class="service_information" style="height: 500px;">
 			<div class="six columns category trains">
 				<div >
 				 	<h5> <%=service.name%> </h5>
@@ -47,13 +47,19 @@
 				</div>
 				<div class="confirm_information">
 					<% if current_user.present?%>
-						<%= "Add/confirm service "%>
-					<% else %>
-						<%= "else"%>
+					<%= semantic_form_for @order, :url => orders_path do |f| %>
+						<%= f.input :user_id, :as => :hidden, :input_html =>{ :value => current_user.id}%>
+						<%= f.input :service_date,:as => :date_picker%>
+						<%= f.input :service_id, :as => :hidden, :input_html => {:value => service.id} %>
+						<%= f.submit%>
+					<% end%>	
 					<% end%>
 					
-					<%= link_to 'add service', {:controller => "orders", :action => "create", :customer_id => current_user.id, :service_id => service.id}, :method => "post" %>
+					
+					  
+				   	
 				</div>
+				
 			</div>
 		</div>
 	    		
