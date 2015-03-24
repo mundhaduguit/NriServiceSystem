@@ -10,9 +10,10 @@
 				<%= image_tag picture.avatar.url(:medium) ,:class=>"middle_img"%>
 			</div>
 			<div class="star-five">
-			<% order.order_rating.times{%>
-				<%= image_tag "apple_PNG4945.png" ,:height => "42", :width => "42" %>
-	    	<% }%>
+				
+				<% order.order_rating.times{%>
+					<%= image_tag "apple_PNG4945.png" ,:height => "42", :width => "42" %>
+		    	<% }%>
 	    
 			</div>
 				<a href="<%= order_path(:id=>order.id)%>" class="heading_order"><%= picture.heading.upcase[0,20]+" ..." if picture.heading.present?%></a>
