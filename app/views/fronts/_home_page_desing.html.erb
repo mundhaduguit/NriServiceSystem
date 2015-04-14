@@ -60,7 +60,11 @@
 					</li>
 					
 					<li class="menu-tab">
-					<a href="/login" style="color: #FFFFFF">Login</a>
+						<% if current_user.present?%>
+							<a href="/user" style="color: #FFFFFF">Account</a>
+						<%else%>
+							<a href="/login" style="color: #FFFFFF">Login</a>
+						<%end%>
 					</li>
 					
 					<li class="menu-tab">
