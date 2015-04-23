@@ -233,3 +233,19 @@ a.heading_order{
 .formtastic li{
 	list-style:none;
 }
+
+.left_content_new{
+	width:40%;
+	float: left;
+	height:100%;
+	margin-left: 8%;
+}
+.right_content_new{
+	width:50%;
+	float: left;
+	height: 100%
+}
+
+.right_content_new img{
+	height: 450px;
+}
